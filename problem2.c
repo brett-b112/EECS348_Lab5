@@ -2,7 +2,7 @@
 
 int main() {
     int score;
-    int combinations[100][6]; // Assuming a maximum of 100 combinations with up to 6 plays
+    int combinations[10000][5]; // Assuming a maximum of 10000 combinations with up to 6 plays
 
     while (1) {
 		printf("Enter 1 or 0 to quit: \n");
@@ -12,16 +12,7 @@ int main() {
         if (score <= 1) {
             break;
         }
-        
-        if (score < 2) {
-            printf("Invalid input. Score must be at least 2.\n");
-        } else {
-            // Initialize the combinations array
-            for (int i = 0; i < 100; i++) {
-                for (int j = 0; j < 6; j++) {
-                    combinations[i][j] = 0;
-                }
-            }
+
             
             int count = 0; // Count of valid combinations
             
@@ -53,7 +44,7 @@ int main() {
                        combinations[i][3], combinations[i][4], combinations[i][0],
                        combinations[i][1], combinations[i][2]);
             }
-        }
+
     }
     
     return 0;
